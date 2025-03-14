@@ -1,0 +1,201 @@
+module 3
+--------
+
+A web application is a software program that runs in a web browser and allows users to interact with it over the internet. Unlike traditional desktop applications, which require installation on a local device, web applications are accessed via a web browser using a URL.
+
+REACT
+-----
+- React is a popular open-source web application library.
+- Built and maintained by facebook and meta
+
+Features of React
+-----------------
+1, Used to build frontend(UI) - user interface
+2, react is based on js
+3, Used to build SPA(Single page application) - only one page loads into browser(index.html) (rest of the contents are    rewrited into this page)
+4, Declarative application - Directly not alter DOM 
+   - VDOM - virtuall DOM - created by React
+   - It is a copy of real DOM 
+   - diffing algorithm - it is used to compare the virtuall dom with real dom 
+   - recouncillation - updation of real dom as per virtuall dom
+   - Entire application will not re-render with each modification
+5, React use pure function - functions output should only depend on arguments.
+6, language - JSX -Combination of js and html 
+    - JSX is not a browser understanding language 
+7, Transpiling  - Babel library - converts JSX into browser understanding languages - that process is called Transpiling
+8, Data sharing - (sharing of data btw components) - unidirectional by default- parent to child with the help of props
+                - props - predefined object 
+
+steps to create a application
+----------------------------
+- new project - npx create-react-app projectname  
+              - npx is node package executer used to execute node based application 
+- npm create vite@latest projectname
+- cd projectname
+- code .
+- npm install - node_modules  
+- script edit - to open the aplication in default browser
+- npm run dev - to run the application
+
+files
+-----
+1, README.md - document related to the application
+2, package.json - holds the npm configuration 
+dependencies - holds the name of the packages(collection of libraries) installed to the application
+build  - To compress file 
+3, package-lock.json - holds the versions and some important informations regarding the installed libraries .
+4, node_modules - it contains the copy of the installed libraries.
+5, .gitignore - local repotory - conatins name of the files that are not added to git 
+6, vite.config.js - vite configuration
+7, eslint.config.js - Linting refers to the process of analyzing the code to find and fix the problems such as bugs,potential error.
+8, index.html - first loads this page,it has only div tag,it has script tag with connection main.jsx ,it contains getelementbyid(id) and set it as root of the dom ,and calls render to render app.jsx file into the div  
+9, main.jsx - app root component
+10, App.jsx - root component
+11,index.css - global style
+12, app.css - styles applied only to app component
+13, public assets - media contents
+
+component : basic unit of react UI 
+- export - export default componentname
+- import - import variable from 'path'
+- <componentname/>
+- js code should be placed above the return function call
+- html code should be placed inside the return function 
+
+HTML 
+----
+- all html content should be inside a single tag
+- even a html fragment <></>
+- must be placed inside return function
+
+css
+---
+1, inline 
+   - style should be given as object
+   - syntax => <tagname style = {{property:'value',}}></tagname>
+   - backgroundColor:'red'   (should be given in camelcase instead of background-color)
+   - properies with more than one word must be written in camelcase
+2, external
+  - external file with extension as filename.css 
+  - link - import statememts
+3, css modules 
+  - create an externalfile with extension as .module.css (eg:filename.module.css)
+  - it should be created inside scr folder
+  - it can be used anywhere in the project by importing this file
+  - file will be stored into a variable while importing this file
+  - styling is done with the help of this variable
+
+inline - particular tag
+component.css - for a particular component
+module.css - used for more than one component
+index.css - can be used in entire application
+
+js
+--
+- To bring/place js content into jsx put that content inside a curly bracket 
+
+arguments are the values passed to a function, while parameters are the variables that receive those values
+
+ functions with arguments :-
+ should be called as call back function 
+
+ ()=>{
+      functionname(arg)
+ }
+
+ functions without arguments :-
+while calling the function - name of the function is only used,for defining it is same
+
+components in React - basic unit of UI
+-------------------
+rules to create components
+------------------------
+1, component name must start with capital letter
+2, Extension can be js or jsx
+
+
+
+1, functional components  / stateless components
+   ---------------------------------------------
+
+syntax                                      //for loading basic structure in vscode - rfce
+------
+import React from 'react'
+
+function Example(){
+  return(
+    <div>Example</div>
+  )
+}
+
+export default Example
+
+2, class component / Statefull components                        //for loading basic structure in vscode - rcc          
+   --------------------------------------
+
+syntax
+------
+import React, { Component } from 'react'
+
+export default class Random extends Component {
+  render() {
+    return (
+      <div>Random</div>
+    )
+  }
+}
+
+Note - The created component should be connected with the root component inorder to display,it can be drect or indirect connection
+
+normal
+------
+import React from 'react'
+
+function example(props) {
+    console.log(props);
+    
+  return (
+    <div>
+        <h1>Example component</h1>
+        <h2>{props.sub}</h2>              
+                                                  {/* first put {} to convert jsx to js then props.key to access the object */}
+        <h2>{props.sub2}</h2>
+        <h2>{props.age}</h2>
+    </div>
+    
+  )
+}
+
+export default example 
+object destructuring
+--------------------
+import React from 'react'
+
+function example(age) {
+    
+  return (
+    <div>
+        <h1>Example component</h1>
+        <h2>{age}</h2>              
+    </div>
+    
+  )
+}
+
+export default example 
+
+if in case we have to display only one object from parent then,giving only object name instead of calling props(which will give all the objects from parent) - this is called object destructuring.
+
+conditional rendering
+---------------------
+1, ternary operator : condition ? true : false 
+2, Truthy operator : condition && true 
+
+change state 
+------------
+state
+-----
+- Its a predefined object to store data 
+- State is only present in class component by default 
+- when a data is changed in the state the entire component re-render or reloads (This solves the problem of not loading a changed variable when an event is taken place ,earlier clickfn3 example in app.jsx)
+- inorder to change the data in the state - call setState() method
