@@ -198,4 +198,4 @@ state
 - Its a predefined object to store data 
 - State is only present in class component by default 
 - when a data is changed in the state the entire component re-render or reloads (This solves the problem of not loading a changed variable when an event is taken place ,earlier clickfn3 example in app.jsx)
-- inorder to change the data in the state - call setState() method
+- inorder to change the data in the state - call setState() method.
