@@ -7,6 +7,7 @@ REACT
 -----
 - React is a popular open-source web application library.
 - Built and maintained by facebook and meta
+- we are studying react-js ,so we can import libraries based on js only ,there is react-ts also (typescript is the superset of js) , it also supports js relate libraries
 
 Features of React
 -----------------
@@ -21,7 +22,7 @@ Features of React
    - Entire application will not re-render with each modification
 5, React use pure function - functions output should only depend on arguments.
 6, language - JSX -Combination of js and html 
-    - JSX is not a browser understanding language 
+    - JSX is not a browser understanding language (html,css,js are browser understanding langauge)
 7, Transpiling  - Babel library - converts JSX into browser understanding languages - that process is called Transpiling
 8, Data sharing - (sharing of data btw components) - unidirectional by default- parent to child with the help of props
                 - props - predefined object 
@@ -30,7 +31,10 @@ steps to create a application
 ----------------------------
 - new project - npx create-react-app projectname  
               - npx is node package executer used to execute node based application 
+              - node package executer
 - npm create vite@latest projectname
+              - npm -node package manager
+              - npm -used to install
 - cd projectname
 - code .
 - npm install - node_modules  
@@ -40,10 +44,10 @@ steps to create a application
 files
 -----
 1, README.md - document related to the application
-2, package.json - holds the npm configuration 
+2, package.json - holds the npm configuration (ie, how to behave when loaded in a web application)
 dependencies - holds the name of the packages(collection of libraries) installed to the application
 build  - To compress file 
-3, package-lock.json - holds the versions and some important informations regarding the installed libraries .
+3, package-lock.json - holds the versions and some important informations regarding the installed libraries .(how to behave)
 4, node_modules - it contains the copy of the installed libraries.
 5, .gitignore - local repotory - conatins name of the files that are not added to git 
 6, vite.config.js - vite configuration
@@ -199,3 +203,180 @@ state
 - State is only present in class component by default 
 - when a data is changed in the state the entire component re-render or reloads (This solves the problem of not loading a changed variable when an event is taken place ,earlier clickfn3 example in app.jsx)
 - inorder to change the data in the state - call setState() method.
+
+Life cycle of class component
+-----------------------------
+1, Mounting Phase - component is added to the DOM
+   - constructor() - Initialize the state in the class
+   - getDerivedStateFromProps() - It modifies the state with the values of props
+                                - It returns an object - State update
+                                - If it returns null - no state updation 
+   - render() - it returns jsx which is the output of the component that need to be displayed in the browser.
+   - componentDidMount() - network request
+
+2, Updating Phase - Editing of the component
+   - getDerivedStateFromProps() - It modifies the state with the values of props
+                                - It returns an object - State update
+                                - If it returns null - no state updation 
+   - shouldComponentUpdate()    - return true or false
+   - render() - it returns the jsx which is the output of the component that need to be displayed in the browser.
+   - getSnapShotBeforeUpdate()  - It invoke just before the dom is updated with the values from virtual dom to store  information of the real dom.         
+                                    //dom is updated from virtual dom
+   - componentDidUpdate()       - Invoke after the updation in the dom , execute any furthur side effect(api)
+
+3, Unmounting Phase - Removing the component from the DOM 
+   - componentWillUnmount()     - It breaks the network calls and clear the dom.
+
+4, Error handling Phase () -
+   - getDerivedStateFromError() - error shown in UI
+   - componentDidCatch() - error shown in log
+
+   HOOKS
+   -----
+   Hooks are functions that allows developers to use state and life cycle features in functional components
+             ---------
+  There are two types of Hooks
+  -----------------------------
+  1, Predefined Hooks - already available buildin hooks 
+     eg - useState(),useEffect(),useRef(),useContext() etc
+  2, Custom Hooks - defined by developer
+
+ Rules to use hooks
+ -----------------
+ 1, Import hooks at the top of the functional component
+ 2, Hooks should be called at the top portion inside the function
+ 3, We cannot invoke hooks conditionally
+
+ useState()
+ ----------
+
+ const [state,fnstate] = useState(initial value)
+
+ rest operator :- 
+
+ steps to setup path for components
+ ---------------------------------
+1, install react-router-dom library- npm i react-router-dom 
+2, wrap app component inside browserRouter Tag
+3, place route tag inside routes which is used to set path
+4, Link - navigative from jsx
+
+JSON SERVER
+-----------
+JSON server is a lightweight and easy to use nodejs tool that simulate RESTful api using JSON file as the data source. 
+it is used by front end developers to create mock APIs without the need for a complex server side.
+
+features
+-------
+it supports http methods like get,put,post,delete
+can do CRUD operations
+
+Steps to create JSON SERVER
+---------------------------
+1, Create a folder for the server
+2, Create package.json file - npm init -y
+3, Install json server library - npm i json-server
+                               - npm i json-server@version - 0.17.4
+
+        - node_modules - copy of library
+        - package-lock.json - version
+4, create .gitignore file - inorder to ignore the node modules, to consume space whie pushing into git
+5, create json file to store data
+6, create index.js file - it is the entry to the server side .
+7, Edit the script key in the package.json file to run index.js file
+
+note : require keyword is used to import a particular library
+
+steps to be followwed in index.js file
+---------------------------------------
+1,import json server library using require()
+2,create server using create() method
+3,set a port for the server to run
+4,make the server listen to the request arriving at the port with the help of listen() method.
+5,run the index.js file
+
+6,middleware - function which is capable of breaking request-response cycle.
+ - default() -it is a method which returns middleware that is capable to parse the json data
+7,set up path to their db.json files using router() method
+8,Tell the server to use the middleware and routes
+9,create a structure to store data in the json file
+
+nodemon index.js -used to autocompile in development phase
+
+axios
+-----
+- Axios is a promise-based HTTP Client for node.js and the browser. used for making HTTP requests to APIs.
+ It is a popular library that simplifies handling requests and responses, providing features like request cancellation, response timeout, and automatic JSON parsing.
+- .then() - response
+- .catch() - error
+
+useEffect 
+---------
+- used to achieve life cycle to an functional component 
+- handle sideEffect
+syntax
+------
+1, useEffect(()=>{
+
+},dependecy)
+
+dependency - when to call the useEffect
+1, no depenency - useEffect will be called repeatedly
+2, [] -empty array - useeffect will be called when the page loads to browser
+3, states and props [state,props] - useeffect will be called when the page loads to the browser and also useeffect will be called when the value of state or props changes
+
+state lifting
+-------------
+uszed for sharing data btw the components
+it refers to the technique where state is moved (lifted) from the child to the parent component
+method to change the state will be passed to the child component which provide the data
+state will be passed to the other child component which accepts the data
+
+Intl.DateTimeFormat
+-------------------
+The Intl.DateTimeFormat object enables language-sensitive date and time formatting.
+syntax
+------
+console.log(new Intl.DateTimeFormat("en-US").format(date));
+
+
+note :-
+const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+
+// Results below use the time zone of America/Los_Angeles (UTC-0800, Pacific Standard Time)
+
+// US English uses month-day-year order
+console.log(new Intl.DateTimeFormat("en-US").format(date));
+// "12/19/2012"
+
+// British English uses day-month-year order
+console.log(new Intl.DateTimeFormat("en-GB").format(date));
+// "19/12/2012"
+
+// Korean uses year-month-day order
+console.log(new Intl.DateTimeFormat("ko-KR").format(date));
+// "2012. 12. 19."
+
+// Arabic in most Arabic speaking countries uses real Arabic digits
+console.log(new Intl.DateTimeFormat("ar-EG").format(date));
+// "١٩‏/١٢‏/٢٠١٢"
+
+// for Japanese, applications may want to use the Japanese calendar,
+// where 2012 was the year 24 of the Heisei era
+console.log(new Intl.DateTimeFormat("ja-JP-u-ca-japanese").format(date));
+// "24/12/19"
+
+// when requesting a language that may not be supported, such as
+// Balinese, include a fallback language, in this case Indonesian
+console.log(new Intl.DateTimeFormat(["ban", "id"]).format(date));
+// "19/12/2012"
+
+Drag and Drop Mechanism
+----------------------
+1, draggable = draggable attricute is set on the content which is needed to be dragged.
+2, onDragStart = to share data with the next component
+               = invokes when  the element start dragging
+               = setData(key,value) - both key and value must be string
+3, droppable - attribute set on the component where data is dropped.
+4, onDragOver - it invokes when the dragged content comes over the droppable content.
+5, onDrop = invokes when the content is dropped on the droppable component 

@@ -1,0 +1,28 @@
+git features
+-----------
+1, to store
+2, to share data with team 
+3, version control system
+4, host minor web application (build in basic languages like html,css,react)
+
+git - Tool to do opeartion in github
+github - cloudbased service
+
+storage - repository
+git -local repository
+github - remote repository
+
+git operations
+--------------
+1,push - To add data to github
+2,clone - To download the entire data from remote to local
+3,pull - To download only the updated content from remote to local 
+
+ clone
+ -----
+ create an empty folder
+ 1, git clone url 
+ 2, npm install 
+ 3, do the changes
+ 4, git init        - note: it will show reinitializing git
+ 5, git add .
