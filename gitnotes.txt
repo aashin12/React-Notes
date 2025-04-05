@@ -15,8 +15,8 @@ github - remote repository
 git operations
 --------------
 1,push - To add data to github
-2,clone - To download the entire data from remote to local
-3,pull - To download only the updated content from remote to local 
+2,clone - To download the entire data from remote to local repository
+3,pull - To download only the updated content from remote to local repository 
 
  clone
  -----
@@ -26,3 +26,28 @@ git operations
  3, do the changes
  4, git init        - note: it will show reinitializing git
  5, git add .
+
+ for working in group 
+ -------------------
+ group leader =>
+ 1,setting => collaborators => add people => give github id of all team members => team member should check the mail click and view the invitation
+ => accept the invitation 
+ 2,first we have to clone => first open the folder in which we have to run the project the => git clone url => cd filename => code .
+ 3, next install noe modules => npm install 
+ 4, run the code => npm run dev 
+pushing of  team  member =>
+git init => git add . =>git commit -m "Message" 
+
+=> git branch branchname => to create new branch
+=> git branch            => to see available branch
+=> git checkout branchname => to switch control of branch
+
+leader
+------
+To see the push request of team members
+pull request => new pull request => (we can see the new pushed code of the team members)check for errors  =>create pull request 
+=> can give description =>create pull request => merge pull request 
+
+team members
+-----------
+1, git pull url - to get the updated version in the code 

@@ -332,6 +332,9 @@ it refers to the technique where state is moved (lifted) from the child to the p
 method to change the state will be passed to the child component which provide the data
 state will be passed to the other child component which accepts the data
 
+state is created in parent component
+state is changed in the component from where the data is shared
+
 Intl.DateTimeFormat
 -------------------
 The Intl.DateTimeFormat object enables language-sensitive date and time formatting.
@@ -380,3 +383,38 @@ Drag and Drop Mechanism
 3, droppable - attribute set on the component where data is dropped.
 4, onDragOver - it invokes when the dragged content comes over the droppable content.
 5, onDrop = invokes when the content is dropped on the droppable component 
+
+coupling
+--------
+Interdependency of components to share data 
+props drilling : it occurs when a parent component generate its state and passes  it down as props to its child components
+that does not consumes it ,instead they only passes it down to their child components
+
+elongated props: props which is neither created nor consumed in a component 
+
+disadvantage: data lose is the main disadvantage of this feature 
+
+REDUX
+-----
+State management system 
+its not completely a part of react ,its an external js library 
+
+components of REDUX
+-------------------
+1, Action - its a function used to create action is  => createAction
+          - is a function used to do logical opeartion to update the data
+          - output of the action is called payload
+
+2, Reducer - The function used to create reducer is createReducer()
+           - it have the ability to update state stored in a store
+
+3, Store   - function used to create store is configureStore()
+           - it is the place where state is created 
+           - all the component is having the ability to access the store.
+
+REDUX TOOL KIT
+--------------
+There are no action & reducer components but has a slice component which does the work of both 
+
+1, slice
+2, store
