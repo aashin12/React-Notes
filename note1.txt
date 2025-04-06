@@ -244,7 +244,7 @@ Life cycle of class component
  Rules to use hooks
  -----------------
  1, Import hooks at the top of the functional component.
- 2, Hooks should be called at the top portion inside the function.
+ 2, Hooks should be called at the top portion inside the function .
  3, We cannot invoke hooks conditionally.
 
  useState()
