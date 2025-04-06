@@ -258,7 +258,7 @@ Life cycle of class component
  ---------------------------------
 1, install react-router-dom library- npm i react-router-dom.
 2, wrap app component inside browserRouter Tag.
-3, place route tag inside routes which is used to set path.
+3, place route tag inside routes which is used to set path .
 4, Link - navigative from jsx.
 
 JSON SERVER
