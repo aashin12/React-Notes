@@ -411,7 +411,7 @@ components of REDUX
 3, Store   - function used to create store is configureStore()
            - it is the place where state is created 
            - all the component is having the ability to access the store.
-           - all state in a store is globally accessible
+           - all state in a store is globally accessible.
 
 REDUX TOOL KIT
 --------------
