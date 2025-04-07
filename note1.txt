@@ -268,7 +268,7 @@ it is used by front end developers to create mock APIs without the need for a co
 
 features
 -------
-it supports http methods like get,put,post,delete
+It supports http methods like get,put,post,delete
 can do CRUD operations
 
 Steps to create JSON SERVER
@@ -403,7 +403,7 @@ components of REDUX
 -------------------
 1, Action - its a function used to create action is  => createAction
           - is a function used to do logical opeartion to update the data
-          - output of the action is called payload
+          - output of the action is carried using payload
 
 2, Reducer - The function used to create reducer is createReducer()
            - it have the ability to update state stored in a store
@@ -411,10 +411,41 @@ components of REDUX
 3, Store   - function used to create store is configureStore()
            - it is the place where state is created 
            - all the component is having the ability to access the store.
+           - all state in a store is globally accessible
 
 REDUX TOOL KIT
 --------------
 There are no action & reducer components but has a slice component which does the work of both 
 
 1, slice
+  - function to create slice is createSlice()
 2, store
+
+redux installation steps
+-----------------------
+1,install tool kit using - npm install @reduxjs/toolkit
+2,install react redux using - npm install react-redux
+3,create a slice component inside a redux folder
+4,create a slice inside the component with help of createSlice() function
+   -createSlice() function accepts an object as arg
+   -name of the slice
+   -initialvalue for the state that is been manaaged by tge slice
+   -reducers - this indicate actions to update the state
+   -export the actions and the reducers seperatlty
+5,create store using configureStore function
+6,make the store globally accessible by wrapping the app component inside the provider tag imported by react-redux library 
+7,inorder to access the state from the store ,the component have to use useSelector hook 
+
+
+note
+----
+- const [count,setCount] = useState(initialvalue)
+
+- useEffect(()=>{
+
+     },dependecy)
+
+- const variable = useSelector((state)=>state.reducer)
+
+8,To change the state value,we need to use useDispatch() Hook
+const variable = useDispatch()
