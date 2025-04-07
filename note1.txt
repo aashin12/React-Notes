@@ -406,7 +406,7 @@ components of REDUX
           - output of the action is carried using payload
 
 2, Reducer - The function used to create reducer is createReducer()
-           - it have the ability to update state stored in a store
+           - it have the ability to update state stored in a store.
 
 3, Store   - function used to create store is configureStore()
            - it is the place where state is created 
