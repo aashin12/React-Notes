@@ -415,7 +415,7 @@ components of REDUX
 
 REDUX TOOL KIT
 --------------
-There are no action & reducer components but has a slice component which does the work of both 
+There are no action & reducer components but has a slice component which does the work of both. 
 
 1, slice
   - function to create slice is createSlice()
