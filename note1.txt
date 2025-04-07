@@ -403,7 +403,7 @@ components of REDUX
 -------------------
 1, Action - its a function used to create action is  => createAction
           - is a function used to do logical opeartion to update the data
-          - output of the action is carried using payload
+          - output of the action is carried using payload.
 
 2, Reducer - The function used to create reducer is createReducer()
            - it have the ability to update state stored in a store.
