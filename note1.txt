@@ -409,7 +409,7 @@ components of REDUX
            - it have the ability to update state stored in a store.
 
 3, Store   - function used to create store is configureStore()
-           - it is the place where state is created 
+           - it is the place where state is created.
            - all the component is having the ability to access the store.
            - all state in a store is globally accessible.
 
