@@ -388,7 +388,7 @@ coupling
 --------
 Interdependency of components to share data 
 props drilling : it occurs when a parent component generate its state and passes  it down as props to its child components
-that does not consumes it ,instead they only passes it down to their child components
+that does not consumes it ,instead they only passes it down to their child components.
 
 elongated props: props which is neither created nor consumed in a component.
 
