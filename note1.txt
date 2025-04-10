@@ -13,7 +13,7 @@ Features of React
 -----------------
 1, Used to build frontend(UI) - user interface
 2, react is based on js
-3, Used to build SPA(Single page application) - only one page loads into browser(index.html) (rest of the contents are    rewrited into this page)
+3, Used to build SPA(Single page application) - only one page loads into browser(index.html) (rest of the contents are rewrited into this page)
 4, Declarative application - Directly not alter DOM 
    - VDOM - virtuall DOM - created by React
    - It is a copy of real DOM 
