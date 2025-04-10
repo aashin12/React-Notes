@@ -397,7 +397,7 @@ disadvantage: data lose is the main disadvantage of this feature.
 REDUX
 -----
 State management system .
-its not completely a part of react ,its an external js library 
+its not completely a part of react ,its an external js library .
 
 components of REDUX
 -------------------
