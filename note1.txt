@@ -392,7 +392,7 @@ that does not consumes it ,instead they only passes it down to their child compo
 
 elongated props: props which is neither created nor consumed in a component .
 
-disadvantage: data lose is the main disadvantage of this feature .
+disadvantage: data lose is the main disadvantage of this feature.
 
 REDUX
 -----
