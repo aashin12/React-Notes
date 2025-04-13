@@ -262,7 +262,7 @@ Life cycle of class component
 4, Link - navigative from jsx.
 
 note:in html we use <a href></a> tag
-     in js we use window.location
+     in js we use window.location.
      in jsx we use Link tag.
 
 JSON SERVER
