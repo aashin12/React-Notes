@@ -272,7 +272,7 @@ it is used by front end developers to create mock APIs without the need for a co
 
 features
 -------
-It supports http methods like get,put,post,delete
+It supports http methods like get,put,post,delete.
 can do CRUD operations.
 
 Steps to create JSON SERVER
