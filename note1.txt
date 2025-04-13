@@ -261,6 +261,10 @@ Life cycle of class component
 3, place route tag inside routes which is used to set path.
 4, Link - navigative from jsx.
 
+note:in html we use <a href></a> tag
+     in js we use window.location
+     in jsx we use Link tag.
+
 JSON SERVER
 -----------
 JSON server is a lightweight and easy to use nodejs tool that simulate RESTful api using JSON file as the data source. 
