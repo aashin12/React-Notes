@@ -286,7 +286,7 @@ Steps to create JSON SERVER
         - package-lock.json - version
 4, create .gitignore file - inorder to ignore the node modules, to consume space whie pushing into git
 5, create json file to store data
-6, create index.js file - it is the entry to the server side .
+6, create index.js file - it is the entry to the server side.
 7, Edit the script key in the package.json file to run index.js file
 
 note : require keyword is used to import a particular library
