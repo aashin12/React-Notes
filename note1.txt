@@ -436,7 +436,7 @@ redux installation steps
    -initialvalue for the state that is been manaaged by tge slice.
    -reducers - this indicate actions to update the state.
    -export the actions and the reducers seperatlty.
-5,create store using configureStore function
+5,create store using configureStore function.
 6,make the store globally accessible by wrapping the app component inside the provider tag imported by react-redux library 
 7,inorder to access the state from the store ,the component have to use useSelector hook 
 
