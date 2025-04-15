@@ -433,7 +433,7 @@ redux installation steps
 4,create a slice inside the component with help of createSlice() function
    -createSlice() function accepts an object as arg
    -name of the slice
-   -initialvalue for the state that is been manaaged by tge slice
+   -initialvalue for the state that is been manaaged by tge slice.
    -reducers - this indicate actions to update the state.
    -export the actions and the reducers seperatlty
 5,create store using configureStore function
