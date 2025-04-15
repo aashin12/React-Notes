@@ -428,7 +428,7 @@ There are no action & reducer components but has a slice component which does th
 redux installation steps
 -----------------------
 1,install tool kit using - npm install @reduxjs/toolkit
-2,install react redux using - npm install react-redux
+2,install react redux using - npm install react-redux.
 3,create a slice component inside a redux folder
 4,create a slice inside the component with help of createSlice() function
    -createSlice() function accepts an object as arg
