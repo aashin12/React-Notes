@@ -434,7 +434,7 @@ redux installation steps
    -createSlice() function accepts an object as arg
    -name of the slice
    -initialvalue for the state that is been manaaged by tge slice
-   -reducers - this indicate actions to update the state
+   -reducers - this indicate actions to update the state.
    -export the actions and the reducers seperatlty
 5,create store using configureStore function
 6,make the store globally accessible by wrapping the app component inside the provider tag imported by react-redux library 
