@@ -322,7 +322,7 @@ sideffect-activities which comes against a pure function. eg api calls
 pure function - only the arguments should determine the output of a function
 
 Note : In case of api call,porth ninn oru data kond vann aa functionte output ayt display chyuna casil ath pure function against ahn
-.
+
 syntax
 ------
 1, useEffect(()=>{
