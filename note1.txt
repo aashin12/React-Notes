@@ -204,7 +204,7 @@ state
 - when a data is changed in the state the entire component re-render or reloads (This solves the problem of not loading a changed variable when an event is taken place ,earlier clickfn3 example in app.jsx)
 - inorder to change the data in the state - call setState() method.
 
-Life cycle of class component
+Life cycle of class component.
 -----------------------------
 1, Mounting Phase - component is added to the DOM
    - constructor() - Initialize the state in the class
