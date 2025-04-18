@@ -116,7 +116,7 @@ rules to create components
 ------------------------
 1, component name must start with capital letter
 2, Extension can be js or jsx
-
+.
 
 
 1, functional components  / stateless components
